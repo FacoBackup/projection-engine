@@ -109,7 +109,7 @@ html, body {
   display: grid;
   justify-items: center;
   gap: clamp(32px, 5vh, 100px);
-  align-content: flex-start;
+  align-content: center;
   height: fit-content;
 }
 
