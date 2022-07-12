@@ -3,12 +3,10 @@
  <div id="container">
    <Overview/>
    <Features/>
-   <Download/>
  </div>
 </template>
 
 <script>
-import Download from "@/components/Download";
 import Features from "@/components/Features";
 import Overview from "@/components/Overview";
 import Navigation from "@/components/Navigation";
@@ -18,7 +16,6 @@ export default {
   components: {
     Overview,
     Features,
-    Download,
     Navigation
   }
 }
@@ -34,6 +31,9 @@ export default {
   src: url(https://fonts.gstatic.com/s/materialiconsround/v104/LDItaoyNOAY6Uewc665JcIzCKsKc_M9flwmP.woff2) format("woff2");
 }
 
+a{
+  text-decoration: none;
+}
 [data-icon="true"] {
   font-family: "Material Icons Round" !important;
   font-weight: normal;
@@ -75,7 +75,7 @@ html, body {
   width: 100vw;
   height: 100vh;
   display: grid;
-  grid-template-rows: repeat(4, 100%) ;
+  grid-template-rows: repeat(2, 100%) ;
   gap: 16px;
   overflow-x: hidden;
   overflow-y: auto;
@@ -84,7 +84,33 @@ html, body {
   padding: 8px 10%;
   color: var(--color-secondary);
 }
-.section{
-  height: 100%;
+
+.demo-img{
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+
 }
+.divider{
+
+  width: 75%;
+  height: 2px;
+  background: var(--border-primary);
+}
+.content{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: clamp(32px, 5%, 64px);
+}
+.wrapper{
+  max-width: 100%;
+  overflow-x: hidden;
+  display: grid;
+  justify-items: center;
+  gap: clamp(32px, 5vh, 100px);
+  align-content: flex-start;
+  height: fit-content;
+}
+
 </style>

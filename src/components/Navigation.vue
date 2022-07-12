@@ -1,25 +1,31 @@
 <template>
   <nav class="container" id="nav-wrapper">
-    <button :data-highlight="`${open === 0}`" data-index="0" v-on:click="onClick">
+    <button :data-highlight="`${open === 0}`" data-index="0" v-on:click="onClick" title="overview">
        <span data-icon="true" style="font-size: 1.1rem">
         home
       </span>
     </button>
-    <button :data-highlight="`${open === 1}`" data-index="1" v-on:click="onClick">
+    <button :data-highlight="`${open === 1}`" data-index="1" v-on:click="onClick" title="More about">
       <span data-icon="true" style="font-size: 1.1rem">
         category
       </span>
     </button>
-    <button :data-highlight="`${open === 2}`" data-index="2" v-on:click="onClick">
+
+    <div class="divider"/>
+    <a draggable="false" href="https://github.com/projection-engine" target="_blank" rel="noreferrer">
+      <button   title="Files repository">
       <span data-icon="true" style="font-size: 1.1rem">
-        file_download
+        folder
       </span>
-    </button>
-    <button :data-highlight="`${open === 3}`" data-index="3" v-on:click="onClick">
-      <span data-icon="true" style="font-size: 1.1rem">
-        help
-      </span>
-    </button>
+      </button>
+    </a>
+    <a draggable="false" href="https://github.com/projection-engine/editor/issues" target="_blank" rel="noreferrer" >
+      <button   title="Issues and bugs">
+        <span data-icon="true" style="font-size: 1.1rem">
+          bug_report
+        </span>
+      </button>
+    </a>
   </nav>
 </template>
 
@@ -35,10 +41,9 @@ export default {
   },
   methods: {
     onClick(e) {
-      // const targets = document.querySelectorAll(`.section`)
       const index = parseInt(e.currentTarget.getAttribute("data-index"))
       this.open = index
-      console.log(targets)
+      console.log(index)
       if(targets[index])
         document.getElementById("container").scrollTop = targets[index].offsetTop
     }
@@ -70,6 +75,7 @@ export default {
 
 <style scoped>
 .container{
+
   height: fit-content;
   width: 50px;
   border-radius: 8px;
@@ -78,6 +84,8 @@ export default {
   display: grid;
   align-items: center;
   align-content: center;
+  justify-items: center;
+
   gap: 4px;
 
   position: absolute;
