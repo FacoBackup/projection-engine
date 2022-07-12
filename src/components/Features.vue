@@ -1,5 +1,5 @@
 <template>
-  <div class="section wrapper" style="gap: 8px; height: 100%;">
+  <div class="section wrapper" style="gap: 16px; height: 100%;">
     <div class="content">
       <div style="width: 100%">
         <h1 style="text-align: left">

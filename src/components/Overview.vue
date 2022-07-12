@@ -1,5 +1,5 @@
 <template>
-<div class="section wrapper">
+<div class="section wrapper" style="padding-top: 32px">
    <div class="header">
      <img src="@/assets/logo.png" class="logo"/>
      Projection Engine
@@ -59,7 +59,7 @@ export default {
   width: 100%;
   background: var(--background-quaternary);
   color: white;
-  height: clamp(250px, 30vh, 350px);
+  height: clamp(200px, 25vh, 300px);
   border-radius: 10px;
   display: flex;
   align-items: center;

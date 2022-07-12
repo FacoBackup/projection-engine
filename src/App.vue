@@ -1,22 +1,27 @@
 <template>
-  <Navigation/>
- <div id="container">
-   <Overview/>
-   <Features/>
- </div>
+  <div class="view">
+    <Navigation/>
+    <div id="container">
+      <Overview/>
+      <Features/>
+      <Download/>
+    </div>
+  </div>
 </template>
 
 <script>
 import Features from "@/components/Features";
 import Overview from "@/components/Overview";
 import Navigation from "@/components/Navigation";
+import Download from "@/components/Footer";
 
 export default {
   name: 'App',
   components: {
     Overview,
     Features,
-    Navigation
+    Navigation,
+    Download
   }
 }
 </script>
@@ -71,18 +76,28 @@ html, body {
 * {
   box-sizing: border-box;
 }
-#container{
-  width: 100vw;
-  height: 100vh;
+
+.view{
   display: grid;
-  grid-template-rows: repeat(2, 100%) ;
-  gap: 16px;
+  height: 100vh;
+  width: 100vw;
+
+  color: var(--color-secondary);
+  background: var(--background-tertiary);
+  overflow: hidden;
+}
+#container{
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  /*flex-direction: column; */
+
+  gap: 25vh;
   overflow-x: hidden;
   overflow-y: auto;
+
   position: relative;
-  background: var(--background-tertiary);
-  padding: 8px 10%;
-  color: var(--color-secondary);
 }
 
 .demo-img{
@@ -99,18 +114,25 @@ html, body {
 }
 .content{
   width: 100%;
+  height: fit-content;
+  overflow: visible;
   display: flex;
   align-items: center;
-  gap: clamp(32px, 5%, 64px);
+  gap: 64px;
+}
+.vert-divider{
+  height: 75%;
+  min-width: 2px;
+  background: var(--border-primary);
 }
 .wrapper{
   max-width: 100%;
-  overflow-x: hidden;
+
+  padding: 8px 10%;
+  overflow: visible;
   display: grid;
   justify-items: center;
-  gap: clamp(32px, 5vh, 100px);
+  gap: clamp(32px, 10vh, 92px);
   align-content: center;
-  height: fit-content;
 }
-
 </style>
