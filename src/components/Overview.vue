@@ -12,9 +12,9 @@
       </h1>
       <p>The <strong>Projection Engine</strong> is an open-source and free 3D engine focused on delivering high quality graphical features and easy-to-use tools.</p>
       <p>Taking inspiration from industry established engines, it will surely feel familiar to many, but simpler to work with.</p>
-      <a href="https://github.com/projection-engine/editor/releases/tag/v0.2.0" target="_blank" rel="noreferrer">
+      <a href="https://github.com/projection-engine/editor/releases/tag/v1.0.0-alpha" target="_blank" rel="noreferrer">
         <button class="download-button">
-          Download | 0.2.0 alpha
+          Download | 1.0.0 alpha
         </button>
       </a>
     </div>
